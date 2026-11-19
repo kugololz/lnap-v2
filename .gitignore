@@ -1,0 +1,12 @@
+node_modules/
+dist/
+release/
+.DS_Store
+.env
+.env.local
+*.log
+validator-service/__pycache__/
+validator-service/venv/
+validator-service/.venv/
+*.pyc
+sandbox_temp/

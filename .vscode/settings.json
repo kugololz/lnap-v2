@@ -1,0 +1,12 @@
+{
+  "workbench.colorCustomizations": {
+    "terminal.background": "#00000000",
+    "minimap.background": "#00000000",
+    "scrollbar.shadow": "#00000000"
+  },
+
+  "css.lint.unknownAtRules": "ignore",
+  "editor.quickSuggestions": {
+    "strings": "on"
+  }
+}

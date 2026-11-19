@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    @apply h-full overflow-hidden;
+  }
+
+  body {
+    @apply font-sans;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  /* Scrollbar custom estilo VS Code */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #424242;
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5a5a5a;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent hover:bg-accent-hover text-white px-4 py-2 rounded-md 
+           font-medium text-sm transition-colors duration-150 
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-bg-tertiary hover:bg-bg-hover text-text-primary px-4 py-2 
+           rounded-md font-medium text-sm transition-colors duration-150 
+           border border-border;
+  }
+
+  .panel {
+    @apply bg-bg-secondary border border-border rounded-lg;
+  }
+}
+
+/* Indica que un fragmento de código tiene una explicación disponible al
+   pasar el mouse (hover provider registrado en CodeEditor.jsx). El color
+   rota por bloque (lnap-explain-hint-0..5) para que sea fácil distinguir
+   dónde termina uno y empieza el siguiente. */
+.lnap-explain-hint {
+  border-radius: 2px;
+  transition: filter 0.1s;
+}
+.lnap-explain-hint:hover {
+  filter: brightness(1.35);
+}
+
+.lnap-explain-hint-0 {
+  background-color: rgba(0, 152, 255, 0.22);
+  border-bottom: 1px solid rgba(0, 152, 255, 0.7);
+}
+.lnap-explain-hint-1 {
+  background-color: rgba(78, 201, 176, 0.22);
+  border-bottom: 1px solid rgba(78, 201, 176, 0.7);
+}
+.lnap-explain-hint-2 {
+  background-color: rgba(197, 134, 192, 0.22);
+  border-bottom: 1px solid rgba(197, 134, 192, 0.7);
+}
+.lnap-explain-hint-3 {
+  background-color: rgba(255, 166, 87, 0.22);
+  border-bottom: 1px solid rgba(255, 166, 87, 0.7);
+}
+.lnap-explain-hint-4 {
+  background-color: rgba(255, 121, 198, 0.22);
+  border-bottom: 1px solid rgba(255, 121, 198, 0.7);
+}
+.lnap-explain-hint-5 {
+  background-color: rgba(102, 217, 239, 0.22);
+  border-bottom: 1px solid rgba(102, 217, 239, 0.7);
+}
